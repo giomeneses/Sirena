@@ -1,0 +1,17 @@
+
+# List
+alias la="ls -lA"
+
+# git
+alias gl="git pull"
+alias gp="git push"
+alias ga="git add -u"
+
+# vim
+alias bim="nvim"
+alias vim="nvim"
+alias vi="nvim"
+
+# moves
+alias d="dirs -v"
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
