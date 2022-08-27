@@ -4,35 +4,35 @@
 ## nvim ##
 ##########
 
-mkdir -p "$HOME/.config/nvim"
-mkdir -p "$HOME/.config/nvim/undo"
+mkdir -p "$XDG_CONFIG_HOME/nvim"
+mkdir -p "$XDG_CONFIG_HOME/nvim/undo"
 
-ln -sf "$HOME/dotfiles/nvim/init.vim" "$HOME/.config/nvim"
+ln -sf "$DOTFILES/nvim/init.vim" "$XDG_CONFIG_HOME/nvim"
 
 ########
 ## i3 ##
 ########
 
 # Deletes current config, BEWARE
-rm -rf "$HOME/.config/i3"
-ln -s "$HOME/dotfiles/i3" "$HOME/.config"
+rm -rf "$XDG_CONFIG_HOME/i3"
+ln -s "$DOTFILES/i3" "$XDG_CONFIG_HOME"
 
 #########
 ## git ##
 #########
 
-ln -sf "$HOME/dotfiles/git/.gitconfig" "$HOME"
+ln -sf "$DOTFILES/git/.gitconfig" "$HOME"
 
 #########
 ## zsh ##
 #########
 # Manually specifying items to include so I dont leak secrets
 
-mkdir -p "$HOME/.config/zsh"
+mkdir -p "$XDG_CONFIG_HOME/zsh"
 
-ln -sf "$HOME/dotfiles/zsh/.zshenv" "$HOME"
-ln -sf "$HOME/dotfiles/zsh/.zshrc" "$HOME/.config/zsh"
-ln -sf "$HOME/dotfiles/zsh/aliases" "$HOME/.config/zsh"
+ln -sf "$DOTFILES/zsh/.zshenv" "$HOME"
+ln -sf "$DOTFILES/zsh/.zshrc" "$XDG_CONFIG_HOME/zsh"
+ln -sf "$DOTFILES/zsh/aliases" "$XDG_CONFIG_HOME/zsh"
 
-rm -rf "$HOME/.config/zsh/plugins"
-ln -sf "$HOME/dotfiles/zsh/plugins" "$HOME/.config/zsh"
+rm -rf "$XDG_CONFIG_HOME/zsh/plugins"
+ln -sf "$DOTFILES/zsh/plugins" "$XDG_CONFIG_HOME/zsh"
