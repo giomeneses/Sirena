@@ -18,14 +18,21 @@ rm -rf "$HOME/.config/i3"
 ln -s "$HOME/dotfiles/i3" "$HOME/.config"
 
 #########
+## git ##
+#########
+
+ln -sf "$HOME/dotfiles/git/.gitconfig" "$HOME"
+
+#########
 ## zsh ##
 #########
+# Manually specifying items to include so I dont leak secrets
 
 mkdir -p "$HOME/.config/zsh"
 
 ln -sf "$HOME/dotfiles/zsh/.zshenv" "$HOME"
 ln -sf "$HOME/dotfiles/zsh/.zshrc" "$HOME/.config/zsh"
-ln -sf "$HOME/dotfiles/zsh/aliases" "$HOME/.config/zsh/aliases"
+ln -sf "$HOME/dotfiles/zsh/aliases" "$HOME/.config/zsh"
 
 rm -rf "$HOME/.config/zsh/plugins"
 ln -sf "$HOME/dotfiles/zsh/plugins" "$HOME/.config/zsh"
