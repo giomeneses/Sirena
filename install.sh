@@ -21,14 +21,16 @@ ln -s "$DOTFILES/i3" "$XDG_CONFIG_HOME"
 ## fonts ##
 ###########
 
-mkdir -p "$XDG_DATA_HOME"
+# Copying fonts instead of linking, wont be updating often
+mkdir -p "$XDG_DATA_HOME/fonts"
 cp -rf "$DOTFILES/fonts" "$XDG_DATA_HOME"
 
 #########
 ## git ##
 #########
 
-ln -sf "$DOTFILES/git/.gitconfig" "$HOME"
+mkdir -p "$XDG_CONFIG_HOME/git"
+ln -sf "$DOTFILES/git/.gitconfig" "$XDG_CONFIG_HOME/git/config"
 
 #########
 ## zsh ##
