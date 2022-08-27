@@ -8,8 +8,8 @@ export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 
 # Setting Neovim as the default
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="lvim"
+export VISUAL="lvim"
 
 # commonly used locations 
 export DOTFILES="$HOME/dotfiles"
@@ -25,3 +25,6 @@ export SAVEHIST=10000
 # Modify fzf to use ripgrep
 export FZF_DEFAULT_COMMAND="rg --files --hiden --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# PATH
+path+="/home/govanz/.local/bin"

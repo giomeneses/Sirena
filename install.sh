@@ -9,6 +9,19 @@ mkdir -p "$XDG_CONFIG_HOME/nvim/undo"
 
 ln -sf "$DOTFILES/nvim/init.vim" "$XDG_CONFIG_HOME/nvim"
 
+##########
+## lvim ##
+##########
+
+# Checking for lvim install to avoid config getting overwritten
+if [ $(which lvim) ]; then
+  ln -sf "$DOTFILES/nvim/config.lua" "$XDG_CONFIG_HOME/lvim"
+else
+  echo "Please install LunarVim, config not set"
+fi
+
+
+
 ########
 ## i3 ##
 ########

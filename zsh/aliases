@@ -1,6 +1,6 @@
 # Power 
 alias reboot="sudo reboot"
-alias shutdown="sudo shutdown -now"
+alias shutdown="sudo shutdown now"
 
 # editing configs 
 alias zshrc="vim $DOTFILES/zsh/.zshrc"
@@ -12,7 +12,10 @@ alias einstall="vim $DOTFILES/install.sh"
 alias srczsh="source $DOTFILES/zsh/.zshrc"
 
 # List
-alias la="ls -lA"
+alias ls="exa --oneline"
+alias la="exa --long --all --icons"
+alias lag="exa --long --all --icons --git"
+alias tree="exa --long --tree --level=3"
 
 # git
 alias gl="git pull"
@@ -21,9 +24,9 @@ alias ga="git add -u"
 alias gs="git status"
 
 # vim
-alias bim="nvim"
-alias vim="nvim"
-alias vi="nvim"
+alias bim="lvim"
+alias vim="lvim"
+alias vi="lvim"
 
 # moves
 alias d="dirs -v"
@@ -31,3 +34,6 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 # pacman
 alias paci="sudo pacman -S"
+
+# python
+alias pip="pip3"
