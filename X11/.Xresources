@@ -18,7 +18,7 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
-URxvt*font: xft:DejaVuSansMono:size=14:antialias=true
+URXVT*font: xft:JetBrainsMono Nerd Font Mono:style=SemiBold:size=14:pixelsize=16
 
 URxvt*borderless: false
 URxvt*externalBorder: 0
