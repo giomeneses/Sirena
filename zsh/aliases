@@ -1,3 +1,13 @@
+# Power 
+alias reboot="sudo reboot"
+alias shutdown="sudo shutdown -now"
+
+# editing configs 
+alias zshrc="vim $DOTFILES/zsh/.zshrc"
+alias i3config="vim $DOTFILES/i3/config"
+
+# Sourcing
+alias srczsh="source $DOTFILES/zsh/.zshrc"
 
 # List
 alias la="ls -lA"

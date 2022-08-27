@@ -204,7 +204,7 @@ mode "$mode_system" {
     mode "default"
     bindsym h exec --not-startup-id $i3lockwall && systemctl hibernate, \
     mode "default"
-    bindsym r exec --not-startup-id systemctl reboot, mode "default"
+    bindsym r exec --not-startup-id sudo systemctl reboot, mode "default"
     bindsym CTRL+s exec --not-startup-id systemctl poweroff -i, \
     mode "default"
 

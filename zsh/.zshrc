@@ -55,7 +55,6 @@ autoload -Uz cursor_mode && cursor_mode
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Auto start X11 and X11vnc
-# if [ "$(tty)" = "/dev/tty1" ]; then
-  # pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
-  # pgrep x11vnc || exec x11vnc -bg -forever -usepw -display :0 -xrandr
-# fi
+if [ "$(tty)" = "/dev/tty1" ]; then
+   pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
+fi
