@@ -21,6 +21,9 @@ zstyle ':completion::complete:*' cache-path "$XDG_CACHE_HOME/.zcompcache"
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 unsetopt CASE_GLOB
 
+# zsh-z something or another
+zstyle ':completion:*' menu select
+
 # Group matches and describe.
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*:matches' group 'yes'
