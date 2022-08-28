@@ -7,6 +7,7 @@ alias zshrc="vim $DOTFILES/zsh/.zshrc"
 alias ealiases="vim $DOTFILES/zsh/aliases"
 alias i3config="vim $DOTFILES/i3/config"
 alias einstall="vim $DOTFILES/install.sh"
+alias tmuxconf="vim $DOTFILES/tmux/tmux.conf"
 
 # Sourcing
 alias srczsh="source $DOTFILES/zsh/.zshrc"

@@ -14,13 +14,19 @@ ln -sf "$DOTFILES/nvim/init.vim" "$XDG_CONFIG_HOME/nvim"
 ##########
 
 # Checking for lvim install to avoid config getting overwritten
-if [ $(which lvim) ]; then
+if [ "$(which lvim)" ]; then
   ln -sf "$DOTFILES/nvim/config.lua" "$XDG_CONFIG_HOME/lvim"
 else
   echo "Please install LunarVim, config not set"
 fi
 
 
+##########
+## tmux ##
+##########
+
+mkdir -p "$XDG_CONFIG_HOME/tmux"
+ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux"
 
 ########
 ## i3 ##

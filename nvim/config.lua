@@ -62,6 +62,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "yaml",
 }
 
+vim.opt.conceallevel = 0
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
@@ -87,7 +88,7 @@ linters.setup {
   { command = "flake8", filetypes = { "python" } },
   {
     command = "shellcheck",
-    extra_args = { "--severity", "warning", "--line-width=100" },
+    extra_args = { "--severity", "warning" },
   },
   {
     command = "codespell",
@@ -101,15 +102,18 @@ lvim.plugins = {
   { "lunarvim/colorschemes" },
   { "jeffkreeftmeijer/vim-numbertoggle" },
   { "Mofiqul/dracula.nvim" },
-  { "christoomey/vim-tmux-navigator" }
+  { "christoomey/vim-tmux-navigator" },
+  { "chrisbra/csv.vim" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- vim.api.nvim_create_autocmd("BufEnter", {
---   pattern = { "*.json", "*.jsonc" },
---   -- enable wrap mode for json files only
---   command = "setlocal wrap",
--- })
+vim.api.nvim_create_autocmd(
+  { "BufRead", "BufWritePost" },
+  {
+    pattern = "csv",
+    command = ":%ArrangeColumn!",
+  })
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "zsh",
   callback = function()
