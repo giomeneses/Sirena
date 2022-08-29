@@ -18,7 +18,11 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
-URXVT*font: xft:JetBrainsMono Nerd Font Mono:style=SemiBold:size=14:pixelsize=16
+! TODO  Figure out a better solution, glyphs are still pretty small
+URxvt*font: xft:JetBrainsMono Nerd Font:pixelsize=14:antialias=true, \
+            xft:JetBrainsMono Nerd Font:pixelsize=8:antialias=true
+
+URxvt*letterSpace: -1
 
 URxvt*borderless: false
 URxvt*externalBorder: 0

@@ -8,9 +8,11 @@ alias ealiases="vim $DOTFILES/zsh/aliases"
 alias i3config="vim $DOTFILES/i3/config"
 alias einstall="vim $DOTFILES/install.sh"
 alias tmuxconf="vim $DOTFILES/tmux/tmux.conf"
+alias exres="vim $DOTFILES/X11/.Xresources"
 
 # Sourcing
 alias srczsh="source $DOTFILES/zsh/.zshrc"
+alias srcxres="xrdb -merge $DOTFILES/X11/.Xresources"
 
 # List
 alias ls="exa --oneline"
@@ -25,6 +27,7 @@ alias ga="git add -u"
 alias gs="git status"
 
 # vim
+alias nvim="lvim"
 alias bim="lvim"
 alias vim="lvim"
 alias vi="lvim"
