@@ -1,0 +1,14 @@
+# SSH Config
+
+# Global Options
+User govanz
+
+# Hosts
+Host voyager
+  Hostname 192.168.1.12
+Host serenity
+  Hostname 192.168.1.94
+Host pella
+  Hostname 192.168.1.138
+Host sirena
+  Hostname 192.168.1.237

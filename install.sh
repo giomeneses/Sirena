@@ -52,6 +52,13 @@ mkdir -p "$XDG_CONFIG_HOME/git"
 ln -sf "$DOTFILES/git/.gitconfig" "$XDG_CONFIG_HOME/git/config"
 
 #########
+## ssh ##
+#########
+
+mkdir -p "$HOME/.ssh"
+ln -sf "$DOTFILES/ssh/config" "/$HOME/.ssh"
+
+#########
 ## zsh ##
 #########
 # Manually specifying items to include so I dont leak secrets
