@@ -106,12 +106,23 @@ lvim.plugins = {
   { "chrisbra/csv.vim" },
 }
 
--- Autocommands (https://neovim.io/doc/user/autocmd.html)
+-- Autoformat csv files for easier viewing, unformat befort making changes.
+vim.cmd("filetype on")
+local csvarrange = vim.api.nvim_create_augroup('filetype_csv', { clear = true })
 vim.api.nvim_create_autocmd(
-  { "BufRead", },
+  { "BufReadPost", "BufWritePost" },
   {
     pattern = "*.csv",
+    group = csvarrange,
     command = ":%ArrangeColumn!",
+  })
+
+vim.api.nvim_create_autocmd(
+  { "BufWritePre" },
+  {
+    pattern = "*.csv",
+    group = csvarrange,
+    command = ":%UnArrangeColumn",
   })
 
 vim.api.nvim_create_autocmd("FileType", {
