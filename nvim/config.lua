@@ -108,9 +108,9 @@ lvim.plugins = {
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 vim.api.nvim_create_autocmd(
-  { "BufRead", "BufWritePost" },
+  { "BufRead", },
   {
-    pattern = "csv",
+    pattern = "*.csv",
     command = ":%ArrangeColumn!",
   })
 
