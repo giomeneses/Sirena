@@ -4,7 +4,7 @@
 set $mod Mod4
 
 # Font 
-font pango:JetBrains Mono Regular Nerd Font 8
+font pango:JetBrains Mono Regular 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -32,7 +32,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc
+# bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec kitty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -216,6 +217,7 @@ client.background       #F8F8F2
 
 bar {
 
+  position top
   status_command i3status --config ~/.config/i3/i3status.conf
   # Disable all tray icons
   tray_output none
@@ -232,8 +234,10 @@ bar {
     binding_mode       #FF5555 #FF5555 #F8F8F2
   }
 }
-# not sure about this setting yet
+
+# Remove title bar from window
 for_window [class="URxvt*"] border pixel 5
+for_window [class="kitty"] border pixel 5
 
 bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'"
 
@@ -251,7 +255,7 @@ bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show exec urxvtc -n
 #############
 
 # Set up display resolutions
-set $mode_display Config montior resolution - Default config (d)
+set $mode_display Config montior resolution - Default 1080p config (d)
 
 mode "$mode_display" {
     bindsym d exec --no-startup-id sh "$HOME/.config/X11/monitor.sh", mode "default"

@@ -15,10 +15,10 @@ alias srczsh="source $DOTFILES/zsh/.zshrc"
 alias srcxres="xrdb -merge $DOTFILES/X11/.Xresources"
 
 # List
-alias ls="exa --oneline"
-alias la="exa --long --all --icons"
-alias lag="exa --long --all --icons --git"
-alias tree="exa --long --tree --level=3"
+alias ls="exa --header --oneline"
+alias la="exa --header --long --all --icons"
+alias lag="exa --header --long --all --icons --git"
+alias tree="exa --header --long --tree --level=3"
 
 # git
 alias gl="git pull"
@@ -38,6 +38,6 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 # pacman
 alias paci="sudo pacman -S"
-
+alias update="sudo pacman -Syu"
 # python
 alias pip="pip3"

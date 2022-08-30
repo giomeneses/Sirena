@@ -18,11 +18,20 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
+! ! Font Settings
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
 ! TODO  Figure out a better solution, glyphs are still pretty small
-URxvt*font: xft:JetBrainsMono Nerd Font:pixelsize=14:antialias=true, \
-            xft:JetBrainsMono Nerd Font:pixelsize=8:antialias=true
+URxvt*font: xft:JetBrains\ Mono:pixelsize=14, \
+            xft:Symbols\ Nerd\ Font:style=2048-em:size=4
 
 URxvt*letterSpace: -1
+URxvt*lineSpace: -1
 
 URxvt*borderless: false
 URxvt*externalBorder: 0
