@@ -255,7 +255,7 @@ bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show exec urxvtc -n
 #############
 
 # Set up display resolutions
-set $mode_display Config montior resolution - Default 1080p config (d)
+set $mode_display Config montior resolution - Default 1152p config (d)
 
 mode "$mode_display" {
     bindsym d exec --no-startup-id sh "$HOME/.config/X11/monitor.sh", mode "default"
