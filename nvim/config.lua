@@ -104,6 +104,7 @@ lvim.plugins = {
   { "Mofiqul/dracula.nvim" },
   { "christoomey/vim-tmux-navigator" },
   { "chrisbra/csv.vim" },
+  { "mong8se/actually.nvim" }
 }
 
 -- Autoformat csv files for easier viewing, unformat befort making changes.
