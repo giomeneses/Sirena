@@ -11,6 +11,7 @@ alias gl="git pull"
 alias gp="git push"
 alias ga="git add -u"
 alias gs="git status"
+alias config="git -C "$DOTFILES""
 
 # List
 alias ls="exa --header --oneline"
