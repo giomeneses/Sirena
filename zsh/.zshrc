@@ -27,7 +27,7 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 autoload -U compinit; compinit
 
 # Pimping my prompt
-autoload -Uz prompt_purification_setup; prompt_purification_setup
+# autoload -Uz prompt_purification_setup; prompt_purification_setup
 
 # Moving around in style:
 # push the current directory visited on to the stack

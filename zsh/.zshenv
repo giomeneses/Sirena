@@ -26,5 +26,7 @@ export SAVEHIST=10000
 export FZF_DEFAULT_COMMAND="rg --files --hiden --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+
 # PATH
 path+="/home/govanz/.local/bin"

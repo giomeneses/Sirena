@@ -28,7 +28,6 @@ else
   echo "Please install LunarVim, config not set"
 fi
 
-
 ##########
 ## tmux ##
 ##########
@@ -66,6 +65,13 @@ ln -sf "$DOTFILES/git/.gitconfig" "$XDG_CONFIG_HOME/git/config"
 mkdir -p "$HOME/.ssh"
 ln -sf "$DOTFILES/ssh/config" "/$HOME/.ssh"
 
+##############
+## starship ##
+##############
+
+mkdir -p "$XDG_CONFIG_HOME/starship"
+ln -sf "$DOTFILES/starship/starship.toml" "$XDG_CONFIG_HOME/starship"
+
 #########
 ## zsh ##
 #########
@@ -73,7 +79,7 @@ ln -sf "$DOTFILES/ssh/config" "/$HOME/.ssh"
 
 mkdir -p "$XDG_CONFIG_HOME/zsh"
 
-ln -sf "$DOTFILES/zsh/.zshenv" "$HOME"
+ln -sf "$DOTFILES/zsh/.zshenv" "$XDG_CONFIG_HOME/zsh"
 ln -sf "$DOTFILES/zsh/.zshrc" "$XDG_CONFIG_HOME/zsh"
 ln -sf "$DOTFILES/zsh/aliases" "$XDG_CONFIG_HOME/zsh"
 
