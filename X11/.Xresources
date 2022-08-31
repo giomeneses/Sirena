@@ -26,9 +26,11 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
+! URxvt Settings
 ! TODO  Figure out a better solution, glyphs are still pretty small
-URxvt*font: xft:JetBrains\ Mono:pixelsize=14, \
-            xft:Symbols\ Nerd\ Font:style=2048-em:size=4
+URxvt*font: xft:JetBrains Mono:pixelsize=14, \
+            xft:Noto Color Emoji:style=regular:pixelsize=8, \
+            xft:Symbols Nerd Font:style=2048-em:size=4
 
 URxvt*letterSpace: -1
 URxvt*lineSpace: -1
