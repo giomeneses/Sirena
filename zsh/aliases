@@ -1,8 +1,4 @@
-# Power 
-alias reboot="sudo reboot"
-alias shutdown="sudo shutdown now"
-
-# editing configs 
+# Configs
 alias zshrc="vim $DOTFILES/zsh/.zshrc"
 alias ealiases="vim $DOTFILES/zsh/aliases"
 alias i3config="vim $DOTFILES/i3/config"
@@ -10,9 +6,11 @@ alias einstall="vim $DOTFILES/install.sh"
 alias tmuxconf="vim $DOTFILES/tmux/tmux.conf"
 alias exres="vim $DOTFILES/X11/.Xresources"
 
-# Sourcing
-alias srczsh="source $DOTFILES/zsh/.zshrc"
-alias srcxres="xrdb -merge $DOTFILES/X11/.Xresources"
+# git
+alias gl="git pull"
+alias gp="git push"
+alias ga="git add -u"
+alias gs="git status"
 
 # List
 alias ls="exa --header --oneline"
@@ -20,24 +18,35 @@ alias la="exa --header --long --all --icons"
 alias lag="exa --header --long --all --icons --git"
 alias tree="exa --header --long --tree --level=3"
 
-# git
-alias gl="git pull"
-alias gp="git push"
-alias ga="git add -u"
-alias gs="git status"
+# moves
+alias d="dirs -v"
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+alias ..="cd .."
+
+# pacman
+alias paci="sudo pacman -S"
+alias pacsyu="sudo pacman -Syu"
+
+# Power 
+alias reboot="sudo reboot"
+alias shutdown="sudo shutdown now"
+
+# python
+alias pip="pip3"
+
+# Sourcing
+alias srczsh="source $DOTFILES/zsh/.zshrc"
+alias srcxres="xrdb -merge $DOTFILES/X11/.Xresources"
+
+# tmux
+alias ta="tmux attach -t"
+alias ts="tmux new-session -s"
+alias tl="tmux list-sessions"
+alias tksv="tmux kill-server"
+alias tkss="tmux kill-session -t"
 
 # vim
 alias nvim="lvim"
 alias bim="lvim"
 alias vim="lvim"
 alias vi="lvim"
-
-# moves
-alias d="dirs -v"
-for index ({1..9}) alias "$index"="cd +${index}"; unset index
-
-# pacman
-alias paci="sudo pacman -S"
-alias update="sudo pacman -Syu"
-# python
-alias pip="pip3"

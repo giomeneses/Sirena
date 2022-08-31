@@ -2,17 +2,15 @@
 # Sourcing all my mispellings, and shortcuts
 source "$XDG_CONFIG_HOME/zsh/aliases"
 
-#############
-## Plugins ##
-#############
+################
+## Parameters ##
+################
 
-source ~/dotfiles/zsh/plugins/zsh-z.plugin.zsh
-source ~/dotfiles/zsh/functions.zsh
+# Use plugins path to autoload functions
+fpath=($ZDOTDIR/plugins $fpath)
 
-if [ $(command -v "fzf") ]; then
-    source /usr/share/fzf/completion.zsh
-    source /usr/share/fzf/key-bindings.zsh
-fi
+# Ignore odd number quotes
+KEYBOARD_HACK="'"
 
 #############
 ## Options ##
@@ -27,13 +25,6 @@ bindkey -M menuselect 'l' vi-down-line-or-history
 
 # zsh completion
 autoload -U compinit; compinit
-
-# auto complete hidden files
-_comp_options+=(globdots)
-source ~/dotfiles/zsh/plugins/completion.zsh
-
-# Use plugins path to autoload functions
-fpath=($ZDOTDIR/plugins $fpath)
 
 # Pimping my prompt
 autoload -Uz prompt_purification_setup; prompt_purification_setup
@@ -51,7 +42,23 @@ bindkey -v
 export KEYTIMEOUT=1
 autoload -Uz cursor_mode && cursor_mode
 
+#############
+## Plugins ##
+#############
 
+
+if [ $(command -v "fzf") ]; then
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/fzf/key-bindings.zsh
+fi
+
+# auto complete hidden files
+_comp_options+=(globdots)
+source ~/dotfiles/zsh/plugins/completion.zsh
+
+source ~/dotfiles/zsh/functions.zsh
+source ~/dotfiles/zsh/plugins/zsh-z.plugin.zsh
+source ~/dotfiles/zsh/plugins/colored-man-pages.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Auto start X11 and X11vnc
