@@ -31,6 +31,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+#autostart kitty
+exec kitty
+
 # start a terminal
 # bindsym $mod+Return exec urxvtc
 bindsym $mod+Return exec kitty 
@@ -253,6 +256,9 @@ bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show exec urxvtc -n
 #############
 ## Display ##
 #############
+
+# Autoset resolution
+exec_always ~/dotfiles/X11/monitor.sh
 
 # Set up display resolutions
 set $mode_display Config montior resolution - Default 1152p config (d)
