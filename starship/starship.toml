@@ -67,6 +67,12 @@ format = '\[ [$symbol($version)]($style) \]'
 [hg_branch]
 format = '\[ [$symbol$branch]($style) \]'
 
+[hostname]
+ssh_only = false
+format = "[$ssh_symbol](bold blue) on [$hostname](bold red) "
+trim_at = ".companyname.com"
+disabled = false
+
 [java]
 format = '\[ [$symbol($version)]($style) \]'
 
