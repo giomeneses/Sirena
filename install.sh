@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Source Envionment Variables
+source "$HOME/dotfiles/zsh/.zshenv" 
+
 ###########
 ## kitty ##
 ###########
