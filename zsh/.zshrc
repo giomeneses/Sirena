@@ -26,9 +26,6 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 # zsh completion
 autoload -U compinit; compinit
 
-# Pimping my prompt
-# autoload -Uz prompt_purification_setup; prompt_purification_setup
-
 # Moving around in style w/ alias d:
 # push the current directory visited on to the stack/ignore dupes
 setopt AUTO_PUSHD
