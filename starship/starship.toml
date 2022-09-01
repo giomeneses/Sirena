@@ -1,3 +1,13 @@
+
+# A minimal left prompt
+format = """$hostname $character"""
+
+# Right prompt
+right_format = """$all"""
+
+# A continuation prompt that displays two filled in arrows
+# continuation_prompt = "🔲"
+
 [aws]
 format = '\[ [$symbol($profile)(\($region\))(\[$duration \])]($style)\]'
 
@@ -53,7 +63,7 @@ format = '\[ [$symbol$account(@$domain)(\($region\))]($style) \]'
 format = '\[ [$symbol$branch]($style) \]'
 
 [git_status]
-format = '([\[ $all_status$ahead_behind \]]($style))'
+format = '([\[$all_status$ahead_behind\]]($style))'
 
 [golang]
 format = '\[ [$symbol($version)]($style) \]'
