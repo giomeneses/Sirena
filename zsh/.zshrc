@@ -42,6 +42,10 @@ autoload -Uz cursor_mode && cursor_mode
 ## Plugins ##
 #############
 
+# check for fzf and source keybinds
+# Ctrl + t - search for file in cwd and subdirs
+# Ctrt + r - reverse search
+# Alt + c - select subdir and switch to it
 if [ $(command -v "fzf") ]; then
     source /usr/share/fzf/completion.zsh
     source /usr/share/fzf/key-bindings.zsh
