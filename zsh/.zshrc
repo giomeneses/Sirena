@@ -26,13 +26,9 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 # zsh completion
 autoload -U compinit; compinit
 
-# Pimping my prompt
-# autoload -Uz prompt_purification_setup; prompt_purification_setup
-
-# Moving around in style:
-# push the current directory visited on to the stack
+# Moving around in style w/ alias d:
+# push the current directory visited on to the stack/ignore dupes
 setopt AUTO_PUSHD
-# Ignore dupe directories
 setopt PUSHD_IGNORE_DUPS
 #do not print the directory stack after using pushd or popd
 setopt PUSHD_SILENT
@@ -46,7 +42,10 @@ autoload -Uz cursor_mode && cursor_mode
 ## Plugins ##
 #############
 
-
+# check for fzf and source keybinds
+# Ctrl + t - search for file in cwd and subdirs
+# Ctrt + r - reverse search
+# Alt + c - select subdir and switch to it
 if [ $(command -v "fzf") ]; then
     source /usr/share/fzf/completion.zsh
     source /usr/share/fzf/key-bindings.zsh
