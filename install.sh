@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source Envionment Variables
-source "$HOME/dotfiles/zsh/.zshenv" 
+source "zsh/.zshenv"
 
 ###########
 ## kitty ##
@@ -82,7 +82,7 @@ ln -sf "$DOTFILES/starship/starship.toml" "$XDG_CONFIG_HOME/starship"
 
 mkdir -p "$XDG_CONFIG_HOME/zsh"
 
-ln -sf "$DOTFILES/zsh/.zshenv" "$XDG_CONFIG_HOME/zsh"
+ln -sf "$DOTFILES/zsh/.zshenv" "$HOME"
 ln -sf "$DOTFILES/zsh/.zshrc" "$XDG_CONFIG_HOME/zsh"
 ln -sf "$DOTFILES/zsh/aliases" "$XDG_CONFIG_HOME/zsh"
 

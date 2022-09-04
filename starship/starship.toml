@@ -1,6 +1,6 @@
 
 # A minimal left prompt
-format = """$hostname $character"""
+format = """$hostname$character"""
 
 # Right prompt
 right_format = """$all"""
@@ -21,7 +21,7 @@ format = '\[ [$symbol($version(-$name))]($style) \]'
 format = '\[ [$symbol($version)]($style) \]'
 
 [cmd_duration]
-format = '\[ [⏱ $duration]($style) \]'
+format = '\[[⏱ $duration]($style)\]'
 
 [cobol]
 format = '\[ [$symbol($version)]($style) \]'
@@ -79,8 +79,7 @@ format = '\[ [$symbol$branch]($style) \]'
 
 [hostname]
 ssh_only = false
-format = "[$ssh_symbol](bold blue) on [$hostname](bold red) "
-trim_at = ".companyname.com"
+format = "[$hostname](bold red) "
 disabled = false
 
 [java]
@@ -162,7 +161,7 @@ format = '\[ [$symbol($version)]($style) \]'
 format = '\[ [$symbol$workspace]($style) \]'
 
 [time]
-format = '\[ [$time]($style) \]'
+format = '\[[$time]($style)\]'
 
 [username]
 format = '\[ [$user]($style) \]'
