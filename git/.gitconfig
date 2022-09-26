@@ -1,6 +1,11 @@
 [user]
-	email = gio@meneses.dev
-	name = Gio Meneses
+	email = 43761225+giomeneses@users.noreply.github.com
+	name = Giovanni Meneses
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [init]
 	defaultBranch = main
 [core]

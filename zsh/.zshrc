@@ -2,9 +2,20 @@
 # Sourcing all my mispellings, and shortcuts
 source "$XDG_CONFIG_HOME/zsh/aliases"
 
+############
+## Eval
+############
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(direnv hook zsh)"
+eval "$(pyenv init --path)"
+
 ################
 ## Parameters ##
 ################
+
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Use plugins path to autoload functions
 fpath=($ZDOTDIR/plugins $fpath)
@@ -46,10 +57,7 @@ autoload -Uz cursor_mode && cursor_mode
 # Ctrl + t - search for file in cwd and subdirs
 # Ctrt + r - reverse search
 # Alt + c - select subdir and switch to it
-if [ $(command -v "fzf") ]; then
-    source /usr/share/fzf/completion.zsh
-    source /usr/share/fzf/key-bindings.zsh
-fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # auto complete hidden files
 _comp_options+=(globdots)
@@ -58,12 +66,9 @@ source ~/dotfiles/zsh/plugins/completion.zsh
 source ~/dotfiles/zsh/functions.zsh
 source ~/dotfiles/zsh/plugins/zsh-z.plugin.zsh
 source ~/dotfiles/zsh/plugins/colored-man-pages.plugin.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Auto start X11 and X11vnc
-if [ "$(tty)" = "/dev/tty1" ]; then
-   pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
-fi
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Initializing starship
 eval "$(starship init zsh)"
+

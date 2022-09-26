@@ -134,3 +134,11 @@ vim.api.nvim_create_autocmd("FileType", {
     require("nvim-treesitter.highlight").attach(0, "bash")
   end,
 })
+
+-- Remove trailing witespace
+vim.api.nvim_create_autocmd(
+  { "BufWritePre" },
+  {
+    pattern = "*",
+    command = ":%s/\\s\\+$//e",
+  })

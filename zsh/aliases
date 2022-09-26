@@ -1,3 +1,4 @@
+
 # Configs
 alias zshrc="vim $DOTFILES/zsh/.zshrc"
 alias ealiases="vim $DOTFILES/zsh/aliases"
@@ -34,6 +35,7 @@ alias shutdown="sudo shutdown now"
 
 # python
 alias pip="pip3"
+alias activate="source .venv/bin/activate"
 
 # Sourcing
 alias srczsh="source $DOTFILES/zsh/.zshrc"
@@ -51,3 +53,7 @@ alias nvim="lvim"
 alias bim="lvim"
 alias vim="lvim"
 alias vi="lvim"
+
+# Work Stuff
+source ~/.civisaliases
+
