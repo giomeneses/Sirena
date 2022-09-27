@@ -1,6 +1,6 @@
 
 # A minimal left prompt
-format = """$username@$hostname\n$character"""
+format = """$username@$hostname$directory\n$character"""
 
 # Right prompt
 right_format = """$all"""
@@ -16,6 +16,11 @@ format = '\[ [$symbol($version)]($style) \]'
 
 [c]
 format = '\[ [$symbol($version(-$name))]($style) \]'
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+vimcmd_symbol = "[❮](bold green)"
 
 [cmake]
 format = '\[ [$symbol($version)]($style) \]'
@@ -40,6 +45,18 @@ format = '\[ [$symbol($version)]($style) \]'
 
 [deno]
 format = '\[ [$symbol($version)]($style) \]'
+
+[directory]
+format = "in [$path]($style)[$read_only]($read_only_style) "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+repo_root_style = "bold green"
+style = "bold cyan"
+read_only = "🔒"
+read_only_style = "red"
+use_os_path_sep = true
+home_symbol = "~"
 
 [docker_context]
 format = '\[ [$symbol$context]($style) \]'
@@ -164,8 +181,10 @@ format = '\[ [$symbol$workspace]($style) \]'
 format = '\[[$time]($style)\]'
 
 [username]
-format = '[$user](bold #bd93f9)'
+style_root = "black bold"
 disabled = false
+show_always = true
+format = '[$user](bold #bd93f9)'
 
 [vagrant]
 format = '\[ [$symbol($version)]($style) \]'

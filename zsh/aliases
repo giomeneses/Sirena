@@ -1,5 +1,6 @@
 
 # Configs
+alias zshenv="vim $DOTFILES/zsh/.zshenv"
 alias zshrc="vim $DOTFILES/zsh/.zshrc"
 alias ealiases="vim $DOTFILES/zsh/aliases"
 alias i3config="vim $DOTFILES/i3/config"
@@ -29,7 +30,7 @@ alias ..="cd .."
 alias paci="sudo pacman -S"
 alias pacsyu="sudo pacman -Syu"
 
-# Power 
+# Power
 alias reboot="sudo reboot"
 alias shutdown="sudo shutdown now"
 
