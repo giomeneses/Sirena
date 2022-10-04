@@ -8,6 +8,9 @@ alias einstall="vim $DOTFILES/install.sh"
 alias tmuxconf="vim $DOTFILES/tmux/tmux.conf"
 alias exres="vim $DOTFILES/X11/.Xresources"
 
+# awsume
+alias awsume="source \$(pyenv which awsume)"
+
 # git
 alias gl="git pull"
 alias gp="git push"

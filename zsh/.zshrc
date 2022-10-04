@@ -19,6 +19,7 @@ export COMPLETION_WAITING_DOTS="true"
 
 # Use plugins path to autoload functions
 fpath=($ZDOTDIR/plugins $fpath)
+fpath=(~/.awsume/zsh-autocomplete/ $fpath)
 
 # Ignore odd number quotes
 export KEYBOARD_HACK="'"
