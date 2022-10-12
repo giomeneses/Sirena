@@ -1,9 +1,7 @@
-
 # A minimal left prompt
-format = """$username@$hostname$directory\n$character"""
-
-# Right prompt
-right_format = """$all"""
+format = """$username@$hostname$directory
+$character"""
+right_format = "$all"
 
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
@@ -45,7 +43,7 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [directory]
-format = "in [$path]($style)[$read_only]($read_only_style) "
+format = "in [$path]($style)[$read_only]($read_only_style)"
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = true
@@ -55,7 +53,7 @@ read_only = "🔒"
 read_only_style = "red"
 use_os_path_sep = true
 home_symbol = "~"
-repo_root_format = "in [$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+repo_root_format = "in [$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)"
 
 [docker_context]
 format = '\[[$symbol$context]($style)\]'
@@ -71,6 +69,10 @@ format = '\[[$symbol($version)]($style)\]'
 
 [erlang]
 format = '\[[$symbol($version)]($style)\]'
+
+[fill]
+symbol = " "
+disabled = false
 
 [gcloud]
 format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
@@ -132,6 +134,7 @@ format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
 format = '\[[$symbol$cloud(\($project\))]($style)\]'
 
 [package]
+disabled =true
 format = '\[[$symbol$version]($style)\]'
 
 [perl]
