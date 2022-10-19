@@ -1,10 +1,15 @@
+
 # Configs
+alias zshenv="vim $DOTFILES/zsh/.zshenv"
 alias zshrc="vim $DOTFILES/zsh/.zshrc"
 alias ealiases="vim $DOTFILES/zsh/aliases"
 alias i3config="vim $DOTFILES/i3/config"
 alias einstall="vim $DOTFILES/install.sh"
 alias tmuxconf="vim $DOTFILES/tmux/tmux.conf"
 alias exres="vim $DOTFILES/X11/.Xresources"
+
+# awsume
+alias awsume="source \$(pyenv which awsume)"
 
 # git
 alias gl="git pull"
@@ -28,12 +33,13 @@ alias ..="cd .."
 alias paci="sudo pacman -S"
 alias pacsyu="sudo pacman -Syu"
 
-# Power 
+# Power
 alias reboot="sudo reboot"
 alias shutdown="sudo shutdown now"
 
 # python
 alias pip="pip3"
+alias activate="source .venv/bin/activate"
 
 # Sourcing
 alias srczsh="source $DOTFILES/zsh/.zshrc"
@@ -51,3 +57,7 @@ alias nvim="lvim"
 alias bim="lvim"
 alias vim="lvim"
 alias vi="lvim"
+
+# Work Stuff
+source ~/.civisaliases
+
