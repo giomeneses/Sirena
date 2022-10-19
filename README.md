@@ -1,6 +1,4 @@
-# La Sirena
-
-    Arch Linux VM running on my proxmox server
+# Dotfiles
 
 Building out my dotfiles from scratch, if you install this, beware I barely know what im doing. 
 
