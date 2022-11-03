@@ -20,9 +20,14 @@ function GenerateEncryptedString() {
     local STRING="${1}"
     local SALT=$(openssl rand -hex 8)
     local K=$(openssl rand -hex 12)
-    local ENCRYPTED=$(echo "${STRING}" | openssl enc -aes256 -a -A -S "${SALT}" -k "${K}")
+    local ENCRYPTED=$(echo "${STRING}" | openssl enc -aes256 -md md5 -a -A -S "${SALT}" -k "${K}")
     echo "Encrypted String: ${ENCRYPTED}"
     echo "Salt: ${SALT} | Passphrase: ${K}"
+}
+
+function DecryptString() {
+    # Usage: ~$ DecryptString "Encrypted String" "Salt" "Passphrase"
+    echo "${1}" | /usr/bin/openssl enc -aes256 -md md5 -d -a -A -S "${2}" -k "${3}"
 }
 
 # Marker Replacement
