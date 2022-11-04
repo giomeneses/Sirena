@@ -1,7 +1,6 @@
 # A minimal left prompt
-format = """$username@$hostname$directory
-$character"""
-right_format = "$all"
+format = """$username@$hostname$directory\n$character"""
+right_format = """$all"""
 
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
