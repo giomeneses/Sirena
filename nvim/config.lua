@@ -3,6 +3,7 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "dracula"
 lvim.leader = "space"
+lvim.transparent_window = true
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- unmap a default keymapping
@@ -44,22 +45,21 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  -- "typescript",
-  "tsx",
-  "css",
-  "java",
-  "yaml",
+    "bash",
+    "javascript",
+    "json",
+    "lua",
+    "python",
+    -- "typescript",
+    "tsx",
+    "css",
+    "java",
+    "yaml",
 }
 
 vim.opt.conceallevel = 0
@@ -69,66 +69,66 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "black", filetypes = { "python" } },
-  { command = "isort", filetypes = { "python" } },
+    { command = "black", filetypes = { "python" } },
+    { command = "isort", filetypes = { "python" } },
 }
 
 -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "flake8", filetypes = { "python" } },
-  {
-    command = "shellcheck",
-    extra_args = { "--severity", "warning" },
-  },
-  {
-    command = "codespell",
-    filetypes = { "javascript", "python" },
-  },
+    { command = "flake8", filetypes = { "python" } },
+    {
+        command = "shellcheck",
+        extra_args = { "--severity", "warning" },
+    },
+    {
+        command = "codespell",
+        filetypes = { "javascript", "python" },
+    },
 }
 
 -- Additional Plugins
 lvim.plugins = {
-  { "tpope/vim-surround" },
-  { "lunarvim/colorschemes" },
-  { "jeffkreeftmeijer/vim-numbertoggle" },
-  { "Mofiqul/dracula.nvim" },
-  -- { "christoomey/vim-tmux-navigator" },
-  { "chrisbra/csv.vim" },
-  { "fladson/vim-kitty" },
+    { "tpope/vim-surround" },
+    { "lunarvim/colorschemes" },
+    { "jeffkreeftmeijer/vim-numbertoggle" },
+    { "Mofiqul/dracula.nvim" },
+    -- { "christoomey/vim-tmux-navigator" },
+    { "chrisbra/csv.vim" },
+    { "fladson/vim-kitty" },
 }
 
 -- Autoformat csv files for easier viewing, unformat befort making changes.
 vim.cmd("filetype on")
 local csvarrange = vim.api.nvim_create_augroup('filetype_csv', { clear = true })
 vim.api.nvim_create_autocmd(
-  { "BufReadPost", "BufWritePost" },
-  {
-    pattern = "*.csv",
-    group = csvarrange,
-    command = ":%ArrangeColumn!",
-  })
+    { "BufReadPost", "BufWritePost" },
+    {
+        pattern = "*.csv",
+        group = csvarrange,
+        command = ":%ArrangeColumn!",
+    })
 
 vim.api.nvim_create_autocmd(
-  { "BufWritePre" },
-  {
-    pattern = "*.csv",
-    group = csvarrange,
-    command = ":%UnArrangeColumn",
-  })
+    { "BufWritePre" },
+    {
+        pattern = "*.csv",
+        group = csvarrange,
+        command = ":%UnArrangeColumn",
+    })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "zsh",
-  callback = function()
-    -- let treesitter use bash highlight for zsh files as well
-    require("nvim-treesitter.highlight").attach(0, "bash")
-  end,
+    pattern = "zsh",
+    callback = function()
+      -- let treesitter use bash highlight for zsh files as well
+      require("nvim-treesitter.highlight").attach(0, "bash")
+    end,
 })
 
 -- Remove trailing witespace
 vim.api.nvim_create_autocmd(
-  { "BufWritePre" },
-  {
-    pattern = "*",
-    command = ":%s/\\s\\+$//e",
-  })
+    { "BufWritePre" },
+    {
+        pattern = "*",
+        command = ":%s/\\s\\+$//e",
+    })

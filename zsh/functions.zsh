@@ -8,13 +8,6 @@ function paclist() {
       expac "${bold_color}% 20n ${fg_no_bold[white]}%d${reset_color}" '{}'
 }
 
-# Search through a file, update with fzf
-ue_search (){
-  #replace this with fzf
-  grep -A 12 "$@" users_editable.yaml
-}
-
-
 function GenerateEncryptedString() {
     # Usage ~$ GenerateEncryptedString "String"
     local STRING="${1}"

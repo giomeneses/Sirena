@@ -18,6 +18,9 @@ alias ga="git add -u"
 alias gs="git status"
 alias conf="git -C "$DOTFILES""
 
+# GAM
+alias gam="$HOME/bin/gamadv-xtd3/gam"
+
 # List
 alias ls="exa --header --oneline"
 alias la="exa --header --long --all --icons"
@@ -57,7 +60,3 @@ alias nvim="lvim"
 alias bim="lvim"
 alias vim="lvim"
 alias vi="lvim"
-
-# Work Stuff
-source ~/.civisaliases
-

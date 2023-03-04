@@ -7,8 +7,8 @@ source "$XDG_CONFIG_HOME/zsh/aliases"
 ############
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(direnv hook zsh)"
-eval "$(pyenv init --path)"
+#eval "$(direnv hook zsh)"
+#eval "$(pyenv init --path)"
 
 ################
 ## Parameters ##
@@ -16,10 +16,10 @@ eval "$(pyenv init --path)"
 
 export ENABLE_CORRECTION="true"
 export COMPLETION_WAITING_DOTS="true"
+export GAMCFGDIR="$HOME/GAMConfig/"
 
 # Use plugins path to autoload functions
 fpath=($ZDOTDIR/plugins $fpath)
-fpath=(~/.awsume/zsh-autocomplete/ $fpath)
 
 # Ignore odd number quotes
 export KEYBOARD_HACK="'"
@@ -67,9 +67,8 @@ source ~/dotfiles/zsh/functions.zsh
 source ~/dotfiles/zsh/plugins/zsh-z.plugin.zsh
 source ~/dotfiles/zsh/plugins/colored-man-pages.plugin.zsh
 source ~/dotfiles/zsh/plugins/fzf.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Initializing starship
 eval "$(starship init zsh)"
-

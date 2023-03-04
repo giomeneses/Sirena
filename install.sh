@@ -9,7 +9,7 @@ source "zsh/.zshenv"
 
 # Deletes current config, BEWARE
 rm -rf "$XDG_CONFIG_HOME/kitty"
-ln -sf "$DOTFILES/kitty" "$XDG_CONFIG_HOME"
+ln -sf "$DOTFILES/kitty" "$XDG_CONFIG_HOME/kitty"
 
 ##########
 ## nvim ##
@@ -26,7 +26,8 @@ ln -sf "$DOTFILES/nvim/init.vim" "$XDG_CONFIG_HOME/nvim"
 
 # Checking for lvim install to avoid config getting overwritten
 if [ "$(which lvim)" ]; then
-  ln -sf "$DOTFILES/nvim/config.lua" "$XDG_CONFIG_HOME/lvim"
+  ln -sf "$DOTFILES/nvim/config.lua" "$XDG_CONFIG_HOME/lvim/"
+#  ln -sf "$DOTFILES/nvim/init.lua" "$XDG_CONFIG_HOME/local/share/lunarvim/lvim/init.vim"
 else
   echo "Please install LunarVim, config not set"
 fi
@@ -44,7 +45,7 @@ ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux"
 
 # Deletes current config, BEWARE
 rm -rf "$XDG_CONFIG_HOME/i3"
-ln -s "$DOTFILES/i3" "$XDG_CONFIG_HOME"
+ln -s "$DOTFILES/i3" "$XDG_CONFIG_HOME/i3"
 
 ###########
 ## fonts ##

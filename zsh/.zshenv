@@ -29,10 +29,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
 # PATH... clean this up!
-path+="/home/govanz/.local/bin"
-export PATH=$PATH:/Users/gmeneses/bin/gamadv-x
-export PATH="$PATH:/Users/gmeneses/.pyenv/shims"
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH=~/.local/bin:$PATH
 export PATH="$PYENV_ROOT/bin:$PATH"
 
@@ -46,6 +42,3 @@ export BREW_PREFIX='/usr/local/opt'
 # export LDFLAGS="-L${BREW_PREFIX}/readline/lib -L${BREW_PREFIX}/openssl/lib"
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
-
-# Work stuff
-source ~/.civisenv
