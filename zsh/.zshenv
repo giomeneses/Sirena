@@ -22,14 +22,16 @@ export HISTSIZE=10000
 # Maximum events in history file
 export SAVEHIST=10000
 
-# Modify fzf to use ripgrep
-export FZF_DEFAULT_COMMAND="rg --files --hiden --glob '!.git'"
+# Modify fzf to use ripgrep and setting colors
+export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
 # PATH... clean this up!
-path+="/home/govanz/.local/bin"
+path+="$HOME/.local/bin"
+path+="$HOME/.cargo/bin"
 export PATH=$PATH:/Users/gmeneses/bin/gamadv-x
 export PATH="$PATH:/Users/gmeneses/.pyenv/shims"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
@@ -48,4 +50,4 @@ export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
 # Work stuff
-source ~/.civisenv
+# source ~/.civisenv

@@ -6,9 +6,9 @@ source "$XDG_CONFIG_HOME/zsh/aliases"
 ## Eval
 ############
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(direnv hook zsh)"
-eval "$(pyenv init --path)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(direnv hook zsh)"
+# eval "$(pyenv init --path)"
 
 ################
 ## Parameters ##
@@ -64,12 +64,16 @@ _comp_options+=(globdots)
 source ~/dotfiles/zsh/plugins/completion.zsh
 
 source ~/dotfiles/zsh/functions.zsh
+source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh/plugins/zsh-z.plugin.zsh
 source ~/dotfiles/zsh/plugins/colored-man-pages.plugin.zsh
-source ~/dotfiles/zsh/plugins/fzf.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dotfiles/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+# zsh zsh-history-substring-search keybinds
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 
 # Initializing starship
 eval "$(starship init zsh)"
-

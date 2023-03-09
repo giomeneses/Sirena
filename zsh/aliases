@@ -9,7 +9,7 @@ alias tmuxconf="vim $DOTFILES/tmux/tmux.conf"
 alias exres="vim $DOTFILES/X11/.Xresources"
 
 # awsume
-alias awsume="source \$(pyenv which awsume)"
+# alias awsume="source \$(pyenv which awsume)"
 
 # git
 alias gl="git pull"
@@ -41,9 +41,10 @@ alias shutdown="sudo shutdown now"
 alias pip="pip3"
 alias activate="source .venv/bin/activate"
 
-# Sourcing
+# Sourcing and resume build
 alias srczsh="source $DOTFILES/zsh/.zshrc"
 alias srcxres="xrdb -merge $DOTFILES/X11/.Xresources"
+alias rcompile="xelatex GioMeneses.tex && explorer.exe GioMeneses.pdf"
 
 # tmux
 alias ta="tmux attach -t"
@@ -59,5 +60,5 @@ alias vim="lvim"
 alias vi="lvim"
 
 # Work Stuff
-source ~/.civisaliases
+# source ~/.civisaliases
 

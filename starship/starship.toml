@@ -16,7 +16,7 @@ format = '\[[$symbol($version(-$name))]($style)\]'
 [character]
 success_symbol = "[➜](bold green)"
 error_symbol = "[✗](bold red)"
-vimcmd_symbol = "[❮](bold green)"
+# vimcmd_symbol = "[❮](bold green)"
 
 [cmake]
 format = '\[[$symbol($version)]($style)\]'
@@ -134,7 +134,7 @@ format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
 format = '\[[$symbol$cloud(\($project\))]($style)\]'
 
 [package]
-disabled =true
+disabled = true
 format = '\[[$symbol$version]($style)\]'
 
 [perl]
