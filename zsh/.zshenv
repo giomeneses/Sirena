@@ -29,7 +29,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
 # PATH... clean this up!
-export PATH=~/.local/bin:$PATH
+export PATH="$HOME/bin/gamadv-xtd3:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 export DISABLE_AUTO_TITLE='true' #requested by tmuxp

@@ -1,6 +1,5 @@
 # A minimal left prompt
-format = """$username@$hostname$directory\n$character"""
-right_format = """$all"""
+format = """$username@$hostname$directory$fill$cmd_duration\n$character"""
 
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
@@ -179,6 +178,7 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$workspace]($style)\]'
 
 [time]
+disabled = false
 format = '\[[$time]($style)\]'
 
 [username]
