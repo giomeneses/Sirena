@@ -11,6 +11,15 @@ source "zsh/.zshenv"
 rm -rf "$XDG_CONFIG_HOME/kitty"
 ln -sf "$DOTFILES/kitty" "$XDG_CONFIG_HOME/kitty"
 
+###########
+## hyper ##
+###########
+
+# Deletes current config, BEWARE
+rm -rf "$HOME/.hyper.js"
+ln -sf "$DOTFILES/hyper/.hyper.js" "$HOME/.hyper.js"
+
+
 ##########
 ## nvim ##
 ##########
