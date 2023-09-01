@@ -20,6 +20,7 @@ alias conf="git -C "$DOTFILES""
 
 # GAM
 alias gam="$HOME/bin/gamadv-xtd3/gam"
+alias gyb="$HOME/bin/gyb/gyb"
 
 # List
 alias ls="exa --header --oneline"
