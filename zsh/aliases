@@ -23,10 +23,10 @@ alias gam="$HOME/bin/gamadv-xtd3/gam"
 alias gyb="$HOME/bin/gyb/gyb"
 
 # List
-alias ls="exa --header --oneline"
-alias la="exa --header --long --all --icons"
-alias lag="exa --header --long --all --icons --git"
-alias tree="exa --header --long --tree --level=3"
+alias ls="eza --header --oneline"
+alias la="eza --header --long --all --icons"
+alias lag="eza --header --long --all --icons --git"
+alias tree="eza --header --long --tree --level=3"
 
 # moves
 alias d="dirs -v"
